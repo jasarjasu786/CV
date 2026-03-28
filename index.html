@@ -3,22 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasar | Full Stack Developer</title>
+<title>Jasar | Developer</title>
 
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
-    background:#0a0a0a;
+    background:#050505;
     color:#fff;
     overflow-x:hidden;
+}
+
+/* GLOW BACKGROUND */
+.bg-glow {
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#00f7ff33,transparent);
+    top:-100px;
+    left:-100px;
+    filter:blur(120px);
+    z-index:-1;
 }
 
 /* HERO */
@@ -28,17 +36,34 @@ body {
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background: radial-gradient(circle at center, #0f2027, #000);
     text-align:center;
 }
 
 .hero h1 {
+    font-family:'Orbitron';
     font-size:60px;
-    color:#00f7ff;
+    background:linear-gradient(90deg,#00f7ff,#00ff88);
+    -webkit-background-clip:text;
+    color:transparent;
 }
-.typing {
+
+.hero p {
     color:#aaa;
-    font-size:20px;
+}
+
+/* BUTTON */
+.btn {
+    margin-top:20px;
+    padding:12px 25px;
+    border-radius:30px;
+    border:1px solid #00f7ff;
+    color:#00f7ff;
+    text-decoration:none;
+    transition:0.3s;
+}
+.btn:hover {
+    background:#00f7ff;
+    color:#000;
 }
 
 /* SECTION */
@@ -50,34 +75,22 @@ body {
 
 h2 {
     text-align:center;
-    margin-bottom:40px;
     color:#00f7ff;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card {
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
+    background:#111;
     padding:20px;
-    margin:15px 0;
     border-radius:15px;
-    border:1px solid rgba(255,255,255,0.1);
+    margin:15px 0;
     transition:0.3s;
+    border:1px solid #222;
 }
 
 .card:hover {
-    transform:translateY(-8px);
-    box-shadow:0 0 20px #00f7ff55;
-}
-
-/* SKILLS */
-.skills span {
-    display:inline-block;
-    margin:5px;
-    padding:8px 15px;
-    background:#00f7ff;
-    color:#000;
-    border-radius:20px;
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #00f7ff33;
 }
 
 /* GRID */
@@ -87,81 +100,84 @@ h2 {
     gap:20px;
 }
 
+/* SKILLS */
+.skills span {
+    display:inline-block;
+    margin:5px;
+    padding:8px 14px;
+    background:#00f7ff;
+    color:#000;
+    border-radius:20px;
+}
+
 /* FOOTER */
 footer {
     text-align:center;
     padding:20px;
-    color:#777;
+    color:#666;
 }
 </style>
 </head>
 
 <body>
 
+<div class="bg-glow"></div>
+
 <!-- HERO -->
 <section class="hero">
-    <h1>Jasar</h1>
-    <p class="typing" id="typing"></p>
+    <h1>JASAR</h1>
+    <p>Full Stack Developer</p>
+    <a href="#contact" class="btn">Hire Me</a>
 </section>
 
-<!-- PROFILE -->
-<section class="section" data-aos="fade-up">
+<!-- ABOUT -->
+<section class="section">
 <h2>About Me</h2>
 <div class="card">
-Full Stack Developer with 8+ years experience building scalable systems, APIs, and enterprise applications.
-Specialized in Laravel, React, and system architecture.
+8+ years experience in Laravel, React, APIs, and enterprise applications. Passionate about building scalable systems.
 </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section" data-aos="fade-up">
-<h2>Tech Stack</h2>
+<section class="section">
+<h2>Skills</h2>
 <div class="skills">
-<span>PHP</span><span>Laravel</span><span>MySQL</span><span>React</span>
-<span>Node.js</span><span>Git</span><span>API</span><span>Docker</span>
+<span>PHP</span><span>Laravel</span><span>React</span>
+<span>MySQL</span><span>Node.js</span><span>Docker</span>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="section" data-aos="fade-up">
+<section class="section">
 <h2>Experience</h2>
 <div class="grid">
 <div class="card">
-<h3>IT Administrator</h3>
-<p>CMD Kerala (2023 - Present)</p>
+<h3>CMD Kerala</h3>
+<p>IT Administrator (2023–Present)</p>
 </div>
 <div class="card">
-<h3>Full Stack Developer</h3>
-<p>KILA (2018 - 2023)</p>
+<h3>KILA</h3>
+<p>Full Stack Developer</p>
 </div>
 <div class="card">
-<h3>Software Engineer</h3>
-<p>NIC (2016 - 2018)</p>
+<h3>NIC</h3>
+<p>Software Engineer</p>
 </div>
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" data-aos="fade-up">
+<section class="section">
 <h2>Projects</h2>
 <div class="grid">
-<div class="card">
-<h3>CMD ERP Suite</h3>
-<p>HRM, Payroll, Project System</p>
-</div>
-<div class="card">
-<h3>TPMS</h3>
-<p>Training Management System</p>
-</div>
-<div class="card">
-<h3>LMS</h3>
-<p>Online Learning Platform</p>
-</div>
+<div class="card">CMD ERP Suite</div>
+<div class="card">Training Management System</div>
+<div class="card">Learning Management System</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" data-aos="fade-up">
+<section class="section" id="contact">
 <h2>Contact</h2>
 <div class="card">
 <p><i class="fa fa-envelope"></i> jasarjasu786@gmail.com</p>
@@ -170,26 +186,8 @@ Specialized in Laravel, React, and system architecture.
 </section>
 
 <footer>
-© 2026 Jasar | Full Stack Developer
+© 2026 Jasar
 </footer>
-
-<!-- JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init();
-
-// Typing effect
-const text = "Full Stack Developer | Laravel | React | API Expert";
-let i = 0;
-function type() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 50);
-    }
-}
-type();
-</script>
 
 </body>
 </html>
