@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasar | Developer</title>
+<title>Jasar | Full Stack Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
-    background:#050505;
+    background:#040404;
     color:#fff;
     overflow-x:hidden;
 }
 
-/* GLOW BACKGROUND */
-.bg-glow {
+/* CURSOR GLOW */
+.cursor {
     position:fixed;
-    width:600px;
-    height:600px;
-    background:radial-gradient(circle,#00f7ff33,transparent);
-    top:-100px;
-    left:-100px;
-    filter:blur(120px);
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,#00f7ff22,transparent);
+    pointer-events:none;
+    transform:translate(-50%,-50%);
     z-index:-1;
 }
 
@@ -38,76 +38,94 @@ body {
     align-items:center;
     text-align:center;
 }
-
 .hero h1 {
     font-family:'Orbitron';
-    font-size:60px;
+    font-size:65px;
     background:linear-gradient(90deg,#00f7ff,#00ff88);
     -webkit-background-clip:text;
     color:transparent;
 }
-
 .hero p {
     color:#aaa;
+    max-width:600px;
 }
 
 /* BUTTON */
 .btn {
-    margin-top:20px;
+    margin:10px;
     padding:12px 25px;
     border-radius:30px;
     border:1px solid #00f7ff;
     color:#00f7ff;
     text-decoration:none;
-    transition:0.3s;
 }
-.btn:hover {
-    background:#00f7ff;
-    color:#000;
-}
+.btn:hover {background:#00f7ff;color:#000;}
 
 /* SECTION */
 .section {
-    padding:80px 20px;
+    padding:90px 20px;
     max-width:1100px;
     margin:auto;
 }
-
-h2 {
-    text-align:center;
-    color:#00f7ff;
-}
+h2 {text-align:center;color:#00f7ff;margin-bottom:40px;}
 
 /* CARD */
 .card {
-    background:#111;
-    padding:20px;
+    background:#0d0d0d;
+    padding:25px;
     border-radius:15px;
-    margin:15px 0;
-    transition:0.3s;
-    border:1px solid #222;
+    border:1px solid #1a1a1a;
+    transition:.3s;
 }
-
 .card:hover {
     transform:translateY(-10px);
-    box-shadow:0 0 30px #00f7ff33;
+    box-shadow:0 0 40px #00f7ff22;
 }
 
 /* GRID */
 .grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:25px;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left:2px solid #00f7ff;
+    padding-left:20px;
+}
+.timeline .card {
+    margin-bottom:20px;
+    position:relative;
+}
+.timeline .card:before {
+    content:"";
+    position:absolute;
+    left:-28px;
+    top:25px;
+    width:12px;height:12px;
+    background:#00f7ff;
+    border-radius:50%;
 }
 
 /* SKILLS */
 .skills span {
     display:inline-block;
+    padding:8px 15px;
     margin:5px;
-    padding:8px 14px;
     background:#00f7ff;
     color:#000;
     border-radius:20px;
+}
+
+/* STATS */
+.stats {
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+.stats div {
+    font-size:25px;
 }
 
 /* FOOTER */
@@ -121,63 +139,114 @@ footer {
 
 <body>
 
-<div class="bg-glow"></div>
+<div class="cursor" id="cursor"></div>
 
 <!-- HERO -->
 <section class="hero">
     <h1>JASAR</h1>
-    <p>Full Stack Developer</p>
-    <a href="#contact" class="btn">Hire Me</a>
+    <p id="typing"></p>
+    <p>Building scalable systems, enterprise applications, and high-performance web platforms.</p>
+    <div>
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="#" class="btn">Download CV</a>
+    </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section">
+<section class="section" data-aos="fade-up">
 <h2>About Me</h2>
 <div class="card">
-8+ years experience in Laravel, React, APIs, and enterprise applications. Passionate about building scalable systems.
+I am a passionate Full Stack Developer with over 8+ years of experience designing and building enterprise-grade applications. My expertise lies in backend architecture, API design, and creating highly efficient systems. I enjoy solving complex problems and delivering scalable solutions.
 </div>
 </section>
 
-<!-- SKILLS -->
-<section class="section">
-<h2>Skills</h2>
-<div class="skills">
-<span>PHP</span><span>Laravel</span><span>React</span>
-<span>MySQL</span><span>Node.js</span><span>Docker</span>
+<!-- STATS -->
+<section class="section" data-aos="fade-up">
+<div class="stats">
+<div><b>8+</b><br>Years Experience</div>
+<div><b>20+</b><br>Projects</div>
+<div><b>10+</b><br>Technologies</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" data-aos="fade-up">
+<h2>What I Do</h2>
+<div class="grid">
+<div class="card">Full Stack Web Development</div>
+<div class="card">Enterprise Software Development</div>
+<div class="card">API Design & Integration</div>
+<div class="card">System Optimization</div>
+<div class="card">Cloud Deployment</div>
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="section">
+<section class="section" data-aos="fade-up">
 <h2>Experience</h2>
-<div class="grid">
+<div class="timeline">
+
 <div class="card">
 <h3>CMD Kerala</h3>
 <p>IT Administrator (2023–Present)</p>
+<p>Managing IT systems, developing ERP solutions, and optimizing infrastructure.</p>
 </div>
+
 <div class="card">
 <h3>KILA</h3>
-<p>Full Stack Developer</p>
+<p>Full Stack Developer (2018–2023)</p>
+<p>Developed multiple enterprise systems and improved efficiency significantly.</p>
 </div>
+
 <div class="card">
 <h3>NIC</h3>
-<p>Software Engineer</p>
+<p>Software Engineer (2016–2018)</p>
+<p>Worked on government software systems and backend services.</p>
 </div>
+
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section">
+<section class="section" data-aos="fade-up">
 <h2>Projects</h2>
 <div class="grid">
-<div class="card">CMD ERP Suite</div>
-<div class="card">Training Management System</div>
-<div class="card">Learning Management System</div>
+
+<div class="card">
+<h3>CMD ERP Suite</h3>
+<p>Complete ERP system with HRM, payroll, and project tracking.</p>
+</div>
+
+<div class="card">
+<h3>TPMS</h3>
+<p>Training system improving efficiency by 40%.</p>
+</div>
+
+<div class="card">
+<h3>LMS</h3>
+<p>Online learning system used during COVID.</p>
+</div>
+
+<div class="card">
+<h3>POSTMAN Portal</h3>
+<p>Bulk communication system (Email & SMS).</p>
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" data-aos="fade-up">
+<h2>Tech Stack</h2>
+<div class="skills">
+<span>PHP</span><span>Laravel</span><span>React</span>
+<span>Node.js</span><span>MySQL</span><span>PostgreSQL</span>
+<span>Docker</span><span>Git</span>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
+<section class="section" id="contact" data-aos="fade-up">
 <h2>Contact</h2>
 <div class="card">
 <p><i class="fa fa-envelope"></i> jasarjasu786@gmail.com</p>
@@ -186,8 +255,32 @@ footer {
 </section>
 
 <footer>
-© 2026 Jasar
+© 2026 Jasar | Full Stack Developer
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+// typing
+const text="Full Stack Developer | Laravel | React | API Expert";
+let i=0;
+function type(){
+ if(i<text.length){
+  document.getElementById("typing").innerHTML+=text[i];
+  i++;
+  setTimeout(type,40);
+ }
+}
+type();
+
+// cursor glow
+document.addEventListener("mousemove",e=>{
+ const c=document.getElementById("cursor");
+ c.style.left=e.clientX+"px";
+ c.style.top=e.clientY+"px";
+});
+</script>
 
 </body>
 </html>
