@@ -134,6 +134,72 @@ footer {
     padding:20px;
     color:#666;
 }
+    /* TECH STACK ORBIT */
+.tech-container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;
+}
+
+.orbit {
+    position:relative;
+    width:350px;
+    height:350px;
+    animation: rotate 20s linear infinite;
+}
+
+.center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#00f7ff;
+    color:#000;
+    padding:20px;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+/* ITEMS */
+.orbit-item {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:
+        rotate(calc(var(--i) * 45deg))
+        translate(150px)
+        rotate(calc(var(--i) * -45deg));
+    text-align:center;
+}
+
+.orbit-item img {
+    width:50px;
+    height:50px;
+    background:#111;
+    padding:10px;
+    border-radius:50%;
+    border:1px solid #00f7ff33;
+    transition:0.3s;
+}
+
+.orbit-item img:hover {
+    transform:scale(1.2);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+.orbit-item span {
+    display:block;
+    margin-top:5px;
+    font-size:12px;
+    color:#aaa;
+}
+
+/* ANIMATION */
+@keyframes rotate {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
 </style>
 </head>
 
@@ -236,21 +302,59 @@ I am a passionate Full Stack Developer with over 8+ years of experience designin
 </section>
 
 <!-- SKILLS -->
+<!-- TECH STACK -->
 <section class="section" data-aos="fade-up">
 <h2>Tech Stack</h2>
-<div class="skills">
-<span>PHP</span><span>Laravel</span><span>React</span>
-<span>Node.js</span><span>MySQL</span><span>PostgreSQL</span>
-<span>Docker</span><span>Git</span>
-</div>
-</section>
 
-<!-- CONTACT -->
-<section class="section" id="contact" data-aos="fade-up">
-<h2>Contact</h2>
-<div class="card">
-<p><i class="fa fa-envelope"></i> jasarjasu786@gmail.com</p>
-<p><i class="fa fa-phone"></i> +91 9995956521</p>
+<div class="tech-container">
+    
+    <div class="orbit">
+        <!-- CENTER -->
+        <div class="center">STACK</div>
+
+        <!-- ICONS -->
+        <div class="orbit-item" style="--i:1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+            <span>PHP</span>
+        </div>
+
+        <div class="orbit-item" style="--i:2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg">
+            <span>Laravel</span>
+        </div>
+
+        <div class="orbit-item" style="--i:3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            <span>React</span>
+        </div>
+
+        <div class="orbit-item" style="--i:4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+            <span>Node</span>
+        </div>
+
+        <div class="orbit-item" style="--i:5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+            <span>MySQL</span>
+        </div>
+
+        <div class="orbit-item" style="--i:6">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+            <span>Docker</span>
+        </div>
+
+        <div class="orbit-item" style="--i:7">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+            <span>Git</span>
+        </div>
+
+        <div class="orbit-item" style="--i:8">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            <span>JS</span>
+        </div>
+
+    </div>
+
 </div>
 </section>
 
