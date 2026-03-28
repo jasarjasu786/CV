@@ -3,129 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My CV</title>
+<title>Jasar | Full Stack Developer</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f6f9;
-        color: #333;
-    }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        background: #fff;
-        padding: 20px;
-    }
-    header {
-        text-align: center;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 15px;
-    }
-    h1 {
-        margin: 0;
-    }
-    .section {
-        margin: 25px 0;
-    }
-    .section h2 {
-        border-left: 4px solid #007bff;
-        padding-left: 10px;
-        color: #007bff;
-    }
-    .item {
-        margin-bottom: 15px;
-    }
-    .skills span {
-        display: inline-block;
-        background: #007bff;
-        color: white;
-        padding: 5px 10px;
-        margin: 5px 5px 0 0;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-    footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 14px;
-        color: #777;
-    }
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f');
+    background-size: cover;
+    background-attachment: fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+.hero h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease;
+}
+.hero p {
+    font-size: 20px;
+    color:#ccc;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin:auto;
+}
+
+h2 {
+    text-align:center;
+    margin-bottom:30px;
+    color:#00d9ff;
+}
+
+/* CARDS */
+.card {
+    background:#111;
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+    transition:0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:0 0 20px #00d9ff33;
+}
+
+/* SKILLS */
+.skills span {
+    display:inline-block;
+    padding:8px 12px;
+    margin:5px;
+    background:#00d9ff;
+    color:#000;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* ICONS */
+.icon {
+    color:#00d9ff;
+    margin-right:10px;
+}
+
+/* PARALLAX */
+.parallax {
+    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+    height:300px;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:20px;
+    color:#888;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Jasar</h1>
+        <p>Full Stack Developer</p>
+        <p><i class="fas fa-envelope icon"></i> jasarjasu786@gmail.com</p>
+    </div>
+</section>
 
-    <header>
-        <h1>Your Name</h1>
-        <p>Email: your@email.com | Phone: +91-XXXXXXXXXX</p>
-        <p>Location: Kerala, India</p>
-    </header>
+<!-- PROFILE -->
+<section class="section">
+    <h2>Profile</h2>
+    <div class="card">
+        Web developer with 8+ years of experience in server-side scripting, UI development, 
+        debugging, and API services. Focused on performance optimization and scalable solutions.
+    </div>
+</section>
 
-    <div class="section">
-        <h2>Profile</h2>
-        <p>
-            Passionate professional with experience in software development, project management, 
-            and system design. Skilled in building scalable applications and solving real-world problems.
-        </p>
+<!-- SKILLS -->
+<section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>Git</span>
+        <span>API</span>
+    </div>
+</section>
+
+<div class="parallax"></div>
+
+<!-- EXPERIENCE -->
+<section class="section">
+    <h2>Experience</h2>
+
+    <div class="card">
+        <h3><i class="fas fa-briefcase icon"></i> IT Administrator - CMD</h3>
+        <p>2023 - Present</p>
     </div>
 
-    <div class="section">
-        <h2>Experience</h2>
-
-        <div class="item">
-            <strong>Software Developer</strong> – Company Name  
-            <p>2023 - Present</p>
-            <p>Worked on web applications, APIs, and system integrations.</p>
-        </div>
-
-        <div class="item">
-            <strong>Intern</strong> – Organization Name  
-            <p>2022 - 2023</p>
-            <p>Assisted in development and testing of internal tools.</p>
-        </div>
-
+    <div class="card">
+        <h3>Full Stack Developer - KILA</h3>
+        <p>2018 - 2023</p>
     </div>
 
-    <div class="section">
-        <h2>Education</h2>
-
-        <div class="item">
-            <strong>Bachelor Degree</strong> – University Name  
-            <p>Year of Passing</p>
-        </div>
-
+    <div class="card">
+        <h3>Software Engineer - NIC</h3>
+        <p>2016 - 2018</p>
     </div>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>JavaScript</span>
-            <span>Git</span>
-        </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Training Planning Management System</h3>
+        <p>Improved efficiency by 40% using Laravel & MySQL</p>
     </div>
 
-    <div class="section">
-        <h2>Projects</h2>
-
-        <div class="item">
-            <strong>Project Name</strong>
-            <p>Short description of your project and what you did.</p>
-        </div>
-
+    <div class="card">
+        <h3>CMD Suite ERP</h3>
+        <p>Complete ERP system with HRM, Payroll, Project Management</p>
     </div>
 
-    <footer>
-        © 2026 Your Name
-    </footer>
+    <div class="card">
+        <h3>Learning Management System</h3>
+        <p>Online learning platform during COVID</p>
+    </div>
 
-</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+    <h2>Contact</h2>
+    <div class="card">
+        <p><i class="fas fa-phone icon"></i> +91 9995956521</p>
+        <p><i class="fas fa-map-marker-alt icon"></i> Thrissur, Kerala</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Jasar | Full Stack Developer
+</footer>
 
 </body>
 </html>
