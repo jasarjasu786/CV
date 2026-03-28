@@ -5,100 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasar | Full Stack Developer</title>
 
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <style>
-* {margin:0;padding:0;box-sizing:border-box;}
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #000;
-    color: #fff;
-    scroll-behavior: smooth;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#0a0a0a;
+    color:#fff;
+    overflow-x:hidden;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
-    url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f');
-    background-size: cover;
-    background-attachment: fixed;
+    height:100vh;
     display:flex;
-    align-items:center;
+    flex-direction:column;
     justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at center, #0f2027, #000);
     text-align:center;
 }
+
 .hero h1 {
-    font-size: 60px;
-    animation: fadeIn 2s ease;
+    font-size:60px;
+    color:#00f7ff;
 }
-.hero p {
-    font-size: 20px;
-    color:#ccc;
+.typing {
+    color:#aaa;
+    font-size:20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding:80px 20px;
+    max-width:1100px;
     margin:auto;
 }
 
 h2 {
     text-align:center;
-    margin-bottom:30px;
-    color:#00d9ff;
+    margin-bottom:40px;
+    color:#00f7ff;
 }
 
-/* CARDS */
+/* GLASS CARD */
 .card {
-    background:#111;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
     padding:20px;
     margin:15px 0;
-    border-radius:10px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
     transition:0.3s;
 }
+
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow:0 0 20px #00d9ff33;
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00f7ff55;
 }
 
 /* SKILLS */
 .skills span {
     display:inline-block;
-    padding:8px 12px;
     margin:5px;
-    background:#00d9ff;
+    padding:8px 15px;
+    background:#00f7ff;
     color:#000;
     border-radius:20px;
-    font-size:14px;
 }
 
-/* ICONS */
-.icon {
-    color:#00d9ff;
-    margin-right:10px;
-}
-
-/* PARALLAX */
-.parallax {
-    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-    height:300px;
-    background-attachment: fixed;
-    background-size:cover;
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 /* FOOTER */
 footer {
     text-align:center;
     padding:20px;
-    color:#888;
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
+    color:#777;
 }
 </style>
 </head>
@@ -107,93 +100,96 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-    <div>
-        <h1>Jasar</h1>
-        <p>Full Stack Developer</p>
-        <p><i class="fas fa-envelope icon"></i> jasarjasu786@gmail.com</p>
-    </div>
+    <h1>Jasar</h1>
+    <p class="typing" id="typing"></p>
 </section>
 
 <!-- PROFILE -->
-<section class="section">
-    <h2>Profile</h2>
-    <div class="card">
-        Web developer with 8+ years of experience in server-side scripting, UI development, 
-        debugging, and API services. Focused on performance optimization and scalable solutions.
-    </div>
+<section class="section" data-aos="fade-up">
+<h2>About Me</h2>
+<div class="card">
+Full Stack Developer with 8+ years experience building scalable systems, APIs, and enterprise applications.
+Specialized in Laravel, React, and system architecture.
+</div>
 </section>
 
 <!-- SKILLS -->
-<section class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>Node.js</span>
-        <span>Git</span>
-        <span>API</span>
-    </div>
+<section class="section" data-aos="fade-up">
+<h2>Tech Stack</h2>
+<div class="skills">
+<span>PHP</span><span>Laravel</span><span>MySQL</span><span>React</span>
+<span>Node.js</span><span>Git</span><span>API</span><span>Docker</span>
+</div>
 </section>
 
-<div class="parallax"></div>
-
 <!-- EXPERIENCE -->
-<section class="section">
-    <h2>Experience</h2>
-
-    <div class="card">
-        <h3><i class="fas fa-briefcase icon"></i> IT Administrator - CMD</h3>
-        <p>2023 - Present</p>
-    </div>
-
-    <div class="card">
-        <h3>Full Stack Developer - KILA</h3>
-        <p>2018 - 2023</p>
-    </div>
-
-    <div class="card">
-        <h3>Software Engineer - NIC</h3>
-        <p>2016 - 2018</p>
-    </div>
-
+<section class="section" data-aos="fade-up">
+<h2>Experience</h2>
+<div class="grid">
+<div class="card">
+<h3>IT Administrator</h3>
+<p>CMD Kerala (2023 - Present)</p>
+</div>
+<div class="card">
+<h3>Full Stack Developer</h3>
+<p>KILA (2018 - 2023)</p>
+</div>
+<div class="card">
+<h3>Software Engineer</h3>
+<p>NIC (2016 - 2018)</p>
+</div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Training Planning Management System</h3>
-        <p>Improved efficiency by 40% using Laravel & MySQL</p>
-    </div>
-
-    <div class="card">
-        <h3>CMD Suite ERP</h3>
-        <p>Complete ERP system with HRM, Payroll, Project Management</p>
-    </div>
-
-    <div class="card">
-        <h3>Learning Management System</h3>
-        <p>Online learning platform during COVID</p>
-    </div>
-
+<section class="section" data-aos="fade-up">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card">
+<h3>CMD ERP Suite</h3>
+<p>HRM, Payroll, Project System</p>
+</div>
+<div class="card">
+<h3>TPMS</h3>
+<p>Training Management System</p>
+</div>
+<div class="card">
+<h3>LMS</h3>
+<p>Online Learning Platform</p>
+</div>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section class="section">
-    <h2>Contact</h2>
-    <div class="card">
-        <p><i class="fas fa-phone icon"></i> +91 9995956521</p>
-        <p><i class="fas fa-map-marker-alt icon"></i> Thrissur, Kerala</p>
-    </div>
+<section class="section" data-aos="fade-up">
+<h2>Contact</h2>
+<div class="card">
+<p><i class="fa fa-envelope"></i> jasarjasu786@gmail.com</p>
+<p><i class="fa fa-phone"></i> +91 9995956521</p>
+</div>
 </section>
 
 <footer>
-    © 2026 Jasar | Full Stack Developer
+© 2026 Jasar | Full Stack Developer
 </footer>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+// Typing effect
+const text = "Full Stack Developer | Laravel | React | API Expert";
+let i = 0;
+function type() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
+    }
+}
+type();
+</script>
 
 </body>
 </html>
